@@ -25,4 +25,4 @@ def bakterie():
 def info():
     Info()
 
-ui.run()
+ui.run(port=4040)
