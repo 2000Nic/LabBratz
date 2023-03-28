@@ -3,5 +3,5 @@ from header import Header
 
 class Info:
     def __init__(self):
-        ui.colors(primary='#F1AEF2')
+        ui.colors(primary='#7EC8F2')
         Header()

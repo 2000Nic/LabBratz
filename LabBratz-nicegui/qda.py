@@ -1,5 +1,6 @@
 from nicegui import ui
 from header import Header
+from qda_setup import QDA_setup
 
 class QDA:
     def __init__(self):
@@ -12,12 +13,8 @@ class QDA:
             ui.tab('Data')
         with ui.tab_panels(tabs, value='Opsætning'):
             with ui.tab_panel('Opsætning'):
-                Opsatning()
+                QDA_setup()
             with ui.tab_panel('Forsøg'):
                 ui.label('Forsøg')
             with ui.tab_panel('Data'):
                 ui.label('Data')
-
-class Opsatning:
-    def __init__(self):
-        ui.label('Vælg parametre').classes('h3')
