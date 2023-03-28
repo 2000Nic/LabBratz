@@ -6,6 +6,12 @@ class Marker:
 
         self.x = ' cx="' + str(x) + '"'
         self.y = ' cy="' + str(y) + '"'
+
+        match c:
+            case 'green':
+                pass
+            case 'pink':
+                c = "deeppink"
         self.c = ' stroke="' + str(c) + '"'
 
         self.posx = x

@@ -37,6 +37,7 @@ class Blob_Detector:
     def detect(self):
         # Detect blobs.
         keypoints = self.detector.detect(self.im)
-        print(keypoints)
         return keypoints
+
+
 
