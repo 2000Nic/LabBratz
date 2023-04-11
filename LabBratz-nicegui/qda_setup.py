@@ -1,5 +1,6 @@
 from nicegui import ui
 import json
+import io
 
 class QDA_setup:
     params = [{'low': 'Ikke sur', 'name': 'Surhed', 'high': 'Meget sur'}]
@@ -68,6 +69,6 @@ class QDA_setup:
 
     def save_QDA(self):
         QDA = {"name": self.QDA_name, "parameters": self.params, "products": self.products}
-        with open(f"{self.QDA_name}.bratz", 'w') as outfile:
+        with io.open(f"{self.QDA_name}.bratz", 'w', encoding="utf-8") as outfile:
             json.dump(QDA, outfile)
         print("gemt")
