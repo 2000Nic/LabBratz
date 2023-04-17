@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 class Radarchart:
     def __init__(self):
         pass
-    def make_chart(self, nam, cats, vals,infill):
+    def make_chart(self, nam, cats, vals, infill):
         #Determines weather the traces are filled in
         filling = 'none'
         if infill:
