@@ -33,7 +33,7 @@ class Homepage:
                 with ui.card().tight():
                     ui.html('<img src="./static/RadarChart.png" style="width: 250px; height: 250px; object-fit: contain;">')
                     ui.label('QDA').classes('text-2xl')
-                    ui.label('QDA er en metode til at bestemme sammensætningen af en blanding.').classes('text-1xl')
+                    ui.label('QDA').classes('text-1xl')
                     ui.button('Gå til QDA', on_click=lambda: ui.open('QDA')).classes('unelevated').style('box-shadow: none !important;')
 
                 with ui.card().tight():
