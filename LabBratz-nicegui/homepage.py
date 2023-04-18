@@ -21,13 +21,7 @@ class Homepage:
                     ui.html('<img src="./static/TLC.png" style="width: 250px; height: 250px; object-fit: contain;">')
                     with ui.card_section():
                         ui.label('TLC').classes('text-2xl')
-
-                        TLC_About = {
-                            1: 'TLC er en metode til at bestemme sammensætningen af en blanding.',
-                            2: 'Vores App tilbyder automatisk markering af analyser.',
-                        }
-                        for key, value in TLC_About.items():
-                            ui.label(value).classes('h3')
+                        ui.html('<p>TLC er en metode til at bestemme koncentrationen af en blanding</p>')
 
                     with ui.card_actions():
                         ui.button('Gå til TLC', on_click=lambda: ui.open('TLC')).classes('unelevated').style('box-shadow: none !important;').props("flat")

@@ -1,5 +1,6 @@
 from nicegui import ui, app
 
+
 class Header:
     def __init__(self):
         app.add_static_files('/', '.')
