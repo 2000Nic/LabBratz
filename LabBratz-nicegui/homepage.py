@@ -30,7 +30,7 @@ class Homepage:
                             ui.label(value).classes('h3')
 
                     with ui.card_actions():
-                        ui.button('Gå til TLC', on_click=lambda: ui.open('TLC')).classes('unelevated').style('box-shadow: none !important;')
+                        ui.button('Gå til TLC', on_click=lambda: ui.open('TLC')).classes('unelevated').style('box-shadow: none !important;').props("flat")
 
                 with ui.card().tight():
                     ui.html('<img src="./static/RadarChart.png" style="width: 250px; height: 250px; object-fit: contain;">')
@@ -38,7 +38,7 @@ class Homepage:
                         ui.label('QDA').classes('text-2xl')
                         ui.label('QDA er en metode til at bestemme sammensætningen af en blanding.').classes('text-1xl')
                     with ui.card_actions():
-                        ui.button('Gå til QDA', on_click=lambda: ui.open('QDA')).classes('unelevated').style('box-shadow: none !important;')
+                        ui.button('Gå til QDA', on_click=lambda: ui.open('QDA')).classes('unelevated').style('box-shadow: none !important;').props('flat')
 
                 with ui.card().tight():
                     ui.html('<img src="./static/Bakterier.png" style="width: 250px; height: 250px; object-fit: contain;">')
@@ -46,4 +46,4 @@ class Homepage:
                         ui.label('Bakterietælling').classes('text-2xl')
                         ui.label('Automatisk optælling af bakterie kolonier').classes('text-1xl')
                     with ui.card_actions():
-                        ui.button('Gå til Bakterietælling', on_click=lambda: ui.open('bakterie')).classes('unelevated').style('box-shadow: none !important;')
+                        ui.button('Gå til Bakterietælling', on_click=lambda: ui.open('bakterie')).classes('unelevated').style('box-shadow: none !important;').props('flat')
