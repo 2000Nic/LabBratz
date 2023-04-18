@@ -30,7 +30,7 @@ class Info:
             with ui.card_section():
                 ui.label('Kontakt').classes('text-2xl')
                 ui.label('Tlf: 12345678').classes('h3')
-                ui.label('Mail: labbratz@toiletpaper.com').classes('h3')
+                ui.label('Mail: labbratz@toiletpaper.dk').classes('h3')
 
     def team(self):
         with ui.card().tight().classes('self-center'):
