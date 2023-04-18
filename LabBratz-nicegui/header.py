@@ -9,3 +9,6 @@ class Header:
             ui.button('QDA', on_click=lambda: ui.open('QDA')).props("flat color=white")
             ui.button('Bakterietælling', on_click=lambda: ui.open('bakterie')).props("flat color=white")
             ui.button('Info', on_click=lambda: ui.open('info')).props("flat color=white")
+
+        with ui.footer().classes():
+            ui.label('© 2023 LabBratz')
