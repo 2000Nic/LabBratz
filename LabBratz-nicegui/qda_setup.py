@@ -69,6 +69,6 @@ class QDA_setup:
 
     def save_QDA(self):
         QDA = {"name": self.QDA_name, "parameters": self.params, "products": self.products}
-        with io.open(f"{self.QDA_name}.bratz", 'w', encoding="utf-8") as outfile:
+        with io.open(f"./saved-setups/{self.QDA_name}.bratz", mode='w', encoding="utf-8") as outfile:
             json.dump(QDA, outfile)
         print("gemt")
