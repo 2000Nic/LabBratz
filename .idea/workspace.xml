@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9ebaa02-fbbc-4743-a030-2ba86d95e3d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/BlobTest.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/baccul.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/tlc'.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/tlc.png" afterDir="false" />
+    <list default="true" id="99c1af59-7a0f-4f7e-b130-e1b2264c3f37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/Pages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/TLC_p.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/uploader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/Blob_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/Blob_detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/blob_detection_temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/blob_detection_temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/bakterie.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/bakterie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/header.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/marker.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/marker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/overlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/overlay.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/overlay.svg" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/overlay.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/tlc.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/tlc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +33,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2NHavDiQhVeFUFcoQicUHJMlVQu" />
+  <component name="ProjectId" id="2NbDWoo6b1kEsrdMQtV3Z6UycxB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,21 +47,21 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Donap\Documents\GitHub\LabBratz" />
       <recent name="C:\Users\Donap\Documents\GitHub\LabBratz\LabBratz-nicegui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Donap\Documents\GitHub\LabBratz\LabBratz-nicegui" />
+      <recent name="C:\Users\Donap\Documents\GitHub\LabBratz\LabBratz-nicegui\static" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9ebaa02-fbbc-4743-a030-2ba86d95e3d3" name="Changes" comment="" />
-      <created>1679323689968</created>
+      <changelist id="99c1af59-7a0f-4f7e-b130-e1b2264c3f37" name="Changes" comment="" />
+      <created>1679923922618</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679323689968</updated>
+      <updated>1679923922618</updated>
     </task>
     <servers />
   </component>

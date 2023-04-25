@@ -17,6 +17,9 @@ class Marker:
         self.posx = x
         self.posy = y
 
+    def set_chosen(self):
+        self.c = ' stroke="red"'
+
     def svg(self):
         svg_file = f'<circle ' + self.x + self.y + ' r="5" fill="none"' + self.c + ' stroke-width="2"/>'
         return svg_file

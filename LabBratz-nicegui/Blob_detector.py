@@ -6,17 +6,16 @@ class Blob_Detector:
         self.setup()
         image = image[2:-1] + image[-1]
         self.im = cv2.imread(image, cv2.IMREAD_GRAYSCALE)
-        self.im = ~self.im
 
     def setup(self):
         params = cv2.SimpleBlobDetector_Params()
         # Change thresholds
-        params.minThreshold = 10
-        params.maxThreshold = 200
+        params.minThreshold = 0
+        params.maxThreshold = 100
 
         # Filter by Area.
         params.filterByArea = True
-        params.minArea = 10
+        params.minArea = 1
 
         # Filter by Circularity
         params.filterByCircularity = True
@@ -24,11 +23,13 @@ class Blob_Detector:
 
         # Filter by Convexity
         params.filterByConvexity = True
-        params.minConvexity = 0.9
+        params.minConvexity = 0.1
+
+        params.filterByColor = True
 
         # Filter by Inertia
         params.filterByInertia = True
-        params.minInertiaRatio = 0.000000000000000000001
+        params.minInertiaRatio = 0.0000000000000001
 
         # Create a detector with the parameters
         # OLD: detector = cv2.SimpleBlobDetector(params)
