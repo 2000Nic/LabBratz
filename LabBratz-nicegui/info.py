@@ -6,10 +6,10 @@ class Info:
     def __init__(self):
         ui.colors(primary='#7EC8F2')
         # Medlemmer
-        self.Alfred = Medlem("Alfred", "42069911", "alfred@toiletpaper.dk")
-        self.Dona = Medlem("Dona", "42069911", "Dona@toiletpaper.dk")
-        self.Nicolas = Medlem("Nicolas", "42069911", "nicolas@toiletpaper.dk")
-        self.Phillip = Medlem("Phillip", "42069911", "phillipvad@toiletpaper.dk")
+        self.Alfred = Medlem('Alfred', '42069911', 'alfred@toiletpaper.dk')
+        self.Dona = Medlem('Dona', '42069911', 'Dona@toiletpaper.dk')
+        self.Nicolas = Medlem('Nicolas', '42069911', 'nicolas@toiletpaper.dk')
+        self.Phillip = Medlem('Phillip', '42069911', 'phillipvad@toiletpaper.dk')
 
         # html
         self.lab = open('about.html', 'r', encoding='utf-8')
@@ -27,7 +27,7 @@ class Info:
     def team(self):
         with ui.card().tight().classes('self-center'):
             with ui.card_section():
-                ui.label('Teamet bag LabBratz').classes('text-4xl').classes('self-center')
+                ui.html('<b>Holdet bag LabBratz</b>').classes('text-4xl').classes('self-center')
             with ui.row().classes('self-center'):
                 self.Alfred.info('<p> Alfred er en idiot</p>')
                 self.Dona.info('<p> Dona er en idiot</p>')
@@ -43,7 +43,7 @@ class Medlem:
 
     def info(self, tekst):
         with ui.card_section():
-            ui.label(self.name).classes('text-2xl')
+            ui.html(f'<b>{self.name}</b>').classes('text-2xl')
             ui.label(f"Tlf: {self.tlf}").classes('h3')
             ui.label(f"Mail: {self.mail}").classes('h3')
             ui.html(tekst).classes('self-center')
