@@ -5,10 +5,14 @@ from header import Header
 class Info:
     def __init__(self):
         ui.colors(primary='#7EC8F2')
+        # Medlemmer
         self.Alfred = Medlem("Alfred", "42069911", "alfred@toiletpaper.dk")
         self.Dona = Medlem("Dona", "42069911", "Dona@toiletpaper.dk")
         self.Nicolas = Medlem("Nicolas", "42069911", "nicolas@toiletpaper.dk")
         self.Phillip = Medlem("Phillip", "42069911", "phillipvad@toiletpaper.dk")
+
+        # html
+        self.lab = open('about.html', 'r', encoding='utf-8')
 
         Header()
         with ui.column().classes('self-center'):
@@ -18,22 +22,7 @@ class Info:
     def info(self):
         with ui.card().tight().classes('self-center'):
             with ui.card_section():
-                ui.label('Info om LabBratz').classes('text-4xl')
-            with ui.card_section():
-                ui.label('LabBratz').classes('text-2xl')
-                ui.html('<p>LabBratz er et program lavet til at hjælpe med at analysere data fra forsøg i laboratoriet.</p>'
-                        ' <p>LabBratz er lavet af 4 HTX elever fra NEXT Vibenshus</p> ')
-
-            with ui.card_section():
-                ui.label('Værktøjer').classes('text-2xl')
-                ui.html('<p>TLC: er en metode til at bestemme koncentrationen af en blanding</p>')
-                ui.html('<p>QDA: </p>')
-                ui.html('<p>Bakterietælling: </p>')
-
-            with ui.card_section():
-                ui.label('Kontakt').classes('text-2xl')
-                ui.label('Tlf: 12345678').classes('h3')
-                ui.label('Mail: labbratz@toiletpaper.dk').classes('h3')
+                ui.html(self.lab.read())
 
     def team(self):
         with ui.card().tight().classes('self-center'):
