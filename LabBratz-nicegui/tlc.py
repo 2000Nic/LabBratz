@@ -32,4 +32,3 @@ class TLC:
 
 
 hew = TLC()
-ui.run(port=4040)
