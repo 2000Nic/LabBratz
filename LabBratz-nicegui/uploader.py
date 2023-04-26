@@ -11,7 +11,7 @@ class Uploader():
     def handle_upload(self, event: events.UploadEventArguments):
         with event.content as f:
             uploaded_file = Pim.open(f)
-            uploaded_file.save("C:/Users/Donap/Documents/GitHub/LabBratz/LabBratz-nicegui/static/uploaded.png")
+            uploaded_file.save("static/uploaded.png")
             self.func()
 
 

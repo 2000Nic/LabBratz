@@ -34,7 +34,6 @@ class QDA_setup:
 
     def update_name(self, v):
         self.QDA_name = v
-        print(self.QDA_name)
 
     def remove_param(self, i):
         del self.params[i]
@@ -71,4 +70,3 @@ class QDA_setup:
         QDA = {"name": self.QDA_name, "parameters": self.params, "products": self.products}
         with io.open(f"./saved-setups/{self.QDA_name}.bratz", mode='w', encoding="utf-8") as outfile:
             json.dump(QDA, outfile)
-        print("gemt")

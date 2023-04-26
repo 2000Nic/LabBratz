@@ -29,7 +29,6 @@ class TLC:
 
     def open_image_page(self):
         ui.open(tlc_page)
-        """ui.open('tlc_page/'+str(self.switch.value))"""
 
 
 hew = TLC()
