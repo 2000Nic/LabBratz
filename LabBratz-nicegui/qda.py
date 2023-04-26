@@ -7,12 +7,12 @@ class QDA:
     def __init__(self):
         ui.colors(primary='#96D0F2')
         Header()
-
-        with ui.tabs().classes('self-center') as tabs:
+        self.tabmenu = ui.tabs().classes('self-center')
+        with self.tabmenu:
             ui.tab('Opsætning')
             ui.tab('Forsøg')
             ui.tab('Data')
-        with ui.tab_panels(tabs, value='Opsætning').style("width:100%"):
+        with ui.tab_panels(self.tabmenu, value='Opsætning').style("width:100%"):
             with ui.tab_panel('Opsætning'):
                 QDA_setup()
             with ui.tab_panel('Forsøg'):
