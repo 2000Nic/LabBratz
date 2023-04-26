@@ -35,10 +35,11 @@ class QDA_trial:
 
             with trialfile:
                 data = json.loads(trialfile.read())
-                tabs = ui.tabs().classes('self-center')
+                tabs = ui.tabs().classes("self-centered")
                 products = data['products']
                 params = data['parameters']
-            for j in data['products']:
+                sliders = []
+                for j in products:
                     with tabs:
                         ui.tab(j)
                     with ui.tab_panels(tabs, value=products[0]):
@@ -47,9 +48,29 @@ class QDA_trial:
                                 ui.label(i['name']).classes("text-h4").style("margin-top:10px")
                                 with ui.row().style("width:100%").classes("justify-between items-center"):
                                     ui.label(i['low'])
-                                    ui.slider(min=0, max=15, step=0.01, value=7.5).props(
-                                        "selection-color=transparent").style("max-width: 80%;margin-top:50px;")
+                                    slider = ui.slider(min=0, max=15, step=0.01, value=7.5).props("selection-color=transparent",).style("max-width: 80%;margin-top:50px;")
+                                    sliders.append(slider)
                                     ui.label(i['high'])
+                            if j == products[len(products) - 1]:
+                                ui.button("Gem og afslut", on_click=lambda: self.save_and_exit(sliders, products, params, e))
+
+    def save_and_exit(self, sliders, products, params, e):
+        filename = e.sender.text
+        slider_values = {}
+        data = {}
+        for idx, product in enumerate(products):
+            slider_values[product] = {}
+            for param in params:
+                slider_values[product][param['name']] = sliders[idx * len(params) + params.index(param)].value
+        try:
+            with io.open(f"./saved-data/{filename}.bratdat", mode="r") as file:
+                data = json.load(file)
+        except Exception as exp:
+            print(exp)
+        data[len(data)] = slider_values
+        with io.open(f"./saved-data/{filename}.bratdat", mode="w", encoding="utf-8") as outfile:
+            json.dump(data, outfile)
+
 
     async def back(self):
         res = await self.dialog
