@@ -7,6 +7,7 @@ class QDA_trial:
     def __init__(self):
         self.trial_container = ui.element("div")
         self.qda_start()
+        self.trial_name_or_id = ""
 
         with ui.dialog() as self.dialog, ui.card():
             ui.label("Er du sikker?")
@@ -26,25 +27,29 @@ class QDA_trial:
                 ui.button(trial.replace(".bratz", ""), on_click=self.qda_load)
 
     def qda_load(self, e):
-        print(str(e.sender.text))
         trialfile = io.open("./saved-setups/" + str(e.sender.text) + ".bratz", mode="r")
         self.trial_container.clear()
         with self.trial_container.classes("justify-between items-center").style("width:100%"):
-            #BACK BUTTON
+
             ui.button("Tilbage", on_click=self.back)
-            #BACK BUTTON DONE
+
             with trialfile:
                 data = json.loads(trialfile.read())
-                for j in data['products']:
-                    ui.label("Produkt: " + j).classes("text-h3 text-center")
-                    for i in data['parameters']:
-                        ui.label(i['name']).classes("text-h4").style("margin-top:10px")
-                        with ui.row().style("width:100%").classes("justify-between items-center"):
-                            ui.label(i['low'])
-                            ui.slider(min=0, max=15, step=0.01, value=7.5).props("selection-color=transparent").style("max-width: 80%;margin-top:50px;")
-                            ui.label(i['high'])
-    def qda_(self):
-        pass
+                tabs = ui.tabs().classes('self-center')
+                products = data['products']
+                params = data['parameters']
+            for j in data['products']:
+                    with tabs:
+                        ui.tab(j)
+                    with ui.tab_panels(tabs, value=products[0]):
+                        with ui.tab_panel(j):
+                            for i in params:
+                                ui.label(i['name']).classes("text-h4").style("margin-top:10px")
+                                with ui.row().style("width:100%").classes("justify-between items-center"):
+                                    ui.label(i['low'])
+                                    ui.slider(min=0, max=15, step=0.01, value=7.5).props(
+                                        "selection-color=transparent").style("max-width: 80%;margin-top:50px;")
+                                    ui.label(i['high'])
 
     async def back(self):
         res = await self.dialog
