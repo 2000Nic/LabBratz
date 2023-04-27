@@ -47,3 +47,5 @@ class Medlem:
             ui.label(f"Tlf: {self.tlf}").classes('h3')
             ui.label(f"Mail: {self.mail}").classes('h3')
             ui.html(tekst).classes('self-center')
+
+
