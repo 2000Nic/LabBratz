@@ -53,7 +53,7 @@ class QDA_data:
                 for param in params:
                     temp_val.append(vals[product][param])
                 all_vals.append(temp_val)
-            chart_maker.make_chart("QDA Alle produkter", params, all_vals, True)
+            chart_maker.make_chart("QDA Alle produkter", params, all_vals, True, products)
             # SLUT ALLE PROODUKTER I EN CHART #
             # INDIVIDUELLE CHARTS #
             for product in products:
@@ -62,6 +62,6 @@ class QDA_data:
                 for param in params:
                     temp_val.append(vals[product][param])
                 val_to_show.append(temp_val)
-                chart_maker.make_chart(f"Diagram for {product}", params, val_to_show, False)
+                chart_maker.make_chart(f"Diagram for {product}", params, val_to_show, False, product)
             # SLUT INDIVIDUELLE CHARTS#
 
