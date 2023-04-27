@@ -7,7 +7,6 @@ class QDA_trial:
     def __init__(self):
         self.trial_container = ui.element("div")
         self.qda_start()
-        self.trial_name_or_id = ""
 
         with ui.dialog() as self.dialog, ui.card():
             ui.label("Er du sikker?")
@@ -19,19 +18,20 @@ class QDA_trial:
     def qda_start(self):
         self.trial_container.clear()
         with self.trial_container:
-            heading = ui.label("Åben et nyt forsøg")
+            ui.label("Åben et nyt forsøg").classes("text-h4")
             trials = []
             for root, dirs, files in os.walk("./saved-setups/"):
                 trials.extend((os.path.join("", f) for f in files if f.endswith(".bratz")))
             for trial in trials:
-                ui.button(trial.replace(".bratz", ""), on_click=self.qda_load)
+                ui.button(trial.replace(".bratz", ""), on_click=self.qda_load).style("margin-right: 30px;margin-top:10px")
 
     def qda_load(self, e):
         trialfile = io.open("./saved-setups/" + str(e.sender.text) + ".bratz", mode="r")
         self.trial_container.clear()
         with self.trial_container.classes("justify-between items-center").style("width:100%"):
-
-            ui.button("Tilbage", on_click=self.back)
+            top_container = ui.element("div").style("display: inline")
+            with top_container:
+                ui.button("Tilbage", on_click=self.back)
 
             with trialfile:
                 data = json.loads(trialfile.read())
@@ -40,8 +40,9 @@ class QDA_trial:
                 params = data['parameters']
                 sliders = []
                 for j in products:
-                    with tabs:
-                        ui.tab(j)
+                    with top_container:
+                        with tabs:
+                            ui.tab(j)
                     with ui.tab_panels(tabs, value=products[0]):
                         with ui.tab_panel(j):
                             for i in params:
@@ -67,9 +68,20 @@ class QDA_trial:
                 data = json.load(file)
         except Exception as exp:
             print(exp)
-        data[len(data)] = slider_values
+
+        if len(data) == 0:
+            with io.open(f"./saved-data/{filename}.bratdat", mode="w") as templatefile:
+                data['products'] = products
+                param_list = []
+                for param in params:
+                    param_list.append(param['name'])
+                data['params'] = param_list
+                json.dump(data, templatefile)
+
+        data[len(data) - 2] = slider_values
         with io.open(f"./saved-data/{filename}.bratdat", mode="w", encoding="utf-8") as outfile:
             json.dump(data, outfile)
+        self.back()
 
 
     async def back(self):
