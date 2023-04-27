@@ -27,6 +27,3 @@ class Radarchart:
         )
         figure.update_polars(radialaxis=dict(range=[0, 15]))
         return ui.plotly(figure).style("width: 45%")
-yolo = Radarchart()
-yolo.make_chart('SUP!',['Till a mans not hot', 'Noice dude', 'Wollah wollah, ingen bollah', 'Yo mama'],[[1,4,10,15],[3,2,8,4]],False,False)
-ui.run()
