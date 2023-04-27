@@ -45,7 +45,7 @@ class QDA_data:
     def qda_data_show(self, vals, products, params):
         self.data_container.clear()
         chart_maker = Radarchart()
-        with self.data_container:
+        with self.data_container.classes("justify-between items-center"):
             # ALLE PRODUKTER I EN CHART #
             all_vals = []
             for product in products:
@@ -53,8 +53,7 @@ class QDA_data:
                 for param in params:
                     temp_val.append(vals[product][param])
                 all_vals.append(temp_val)
-            ui.label("Diagram for alle produkter samlet:").classes("text-h4")
-            chart_maker.make_chart("QDA Alle produkter", params, all_vals, False)
+            chart_maker.make_chart("QDA Alle produkter", params, all_vals, True, products)
             # SLUT ALLE PROODUKTER I EN CHART #
             # INDIVIDUELLE CHARTS #
             for product in products:
@@ -63,6 +62,6 @@ class QDA_data:
                 for param in params:
                     temp_val.append(vals[product][param])
                 val_to_show.append(temp_val)
-                ui.label(f"Diagram for {product}")
-                chart_maker.make_chart(f"Diagram for {product}", params, val_to_show, False)
+                chart_maker.make_chart(f"Diagram for {product}", params, val_to_show, False, product)
+            # SLUT INDIVIDUELLE CHARTS#
 
