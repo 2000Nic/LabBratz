@@ -2,6 +2,7 @@ from nicegui import ui
 from header import Header
 from qda_setup import QDA_setup
 from qda_trial import QDA_trial
+from qda_data import QDA_data
 
 class QDA:
     def __init__(self):
@@ -18,4 +19,4 @@ class QDA:
             with ui.tab_panel('Forsøg'):
                 QDA_trial()
             with ui.tab_panel('Data'):
-                ui.label('Data')
+                QDA_data()
