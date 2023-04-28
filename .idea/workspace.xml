@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1a5afc6-4655-408d-950b-adb524211379" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/bac_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/bacpage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/Blob_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/Blob_detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/overlay.png" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/overlay.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/overlay.svg" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/overlay.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/static/table.csv" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/static/table.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/TLC_p.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/TLC_p.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/bakterie.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/bakterie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/static/uploaded.png" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/static/uploaded.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/tlc.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/tlc.py" afterDir="false" />
     </list>

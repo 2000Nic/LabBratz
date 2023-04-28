@@ -2,10 +2,12 @@ import cv2
 
 class Blob_Detector:
 
-    def __init__(self, image):
+    def __init__(self, image, inv = False):
         self.setup()
         image = image[2:-1] + image[-1]
         self.im = cv2.imread(image, cv2.IMREAD_GRAYSCALE)
+        if inv:
+            self.im = ~self.im
 
     def setup(self):
         params = cv2.SimpleBlobDetector_Params()

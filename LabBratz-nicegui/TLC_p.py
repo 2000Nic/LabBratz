@@ -1,9 +1,6 @@
 from nicegui import ui
 from header import Header
 from image import Image
-import random
-from uploader import Uploader
-from marker import Marker
 
 class TLC_Page:
 
