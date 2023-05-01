@@ -32,8 +32,7 @@ class Image:
                 ui.button("Slet alle", on_click=self.clear_all)
             ui.button("Gem som png", on_click=self.save)
             ui.button("Skift billede", on_click=upload_new).style("margin-top: 10px;")
-            ui.button("Gem tabel", on_click=self.save_table)\
-                .style("margin-top: 10px; margin-bottom: 30px;").props("color='purple'")
+            ui.button("Gem tabel", on_click=self.save_table).style("margin-top: 10px; margin-bottom: 30px;").props("color='purple'").tooltip("Når du gemmer en tabel kan du finde den som .csv fil i mappen \"saved-tables\" i programmets mappe.")
 
         self.blob_detector = Blob_Detector(path)
         self.blob_detect()
