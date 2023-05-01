@@ -136,3 +136,4 @@ dmypy.json
 *.jpg
 *.svg
 LabBratz-nicegui/.idea/workspace.xml
+LabBratz-nicegui/saved-tables/*
