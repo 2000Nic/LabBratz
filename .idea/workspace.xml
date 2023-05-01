@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1a5afc6-4655-408d-950b-adb524211379" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/bac_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LabBratz-nicegui/bacpage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/Blob_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/Blob_detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/TLC_p.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/TLC_p.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/bakterie.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/bakterie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/static/uploaded.png" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/static/uploaded.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabBratz-nicegui/tlc.py" beforeDir="false" afterPath="$PROJECT_DIR$/LabBratz-nicegui/tlc.py" afterDir="false" />
-    </list>
+    <list default="true" id="b1a5afc6-4655-408d-950b-adb524211379" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,18 +28,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Donap/Documents/GitHub/LabBratz&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Donap/Documents/GitHub/LabBratz",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Donap\Documents\GitHub\LabBratz\LabBratz-nicegui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alfre\Documents\GitHub\LabBratz\LabBratz-nicegui\saved-setups" />
+      <recent name="C:\Users\alfre\Documents\GitHub\LabBratz\LabBratz-nicegui\saved-data" />
       <recent name="C:\Users\Donap\Documents\GitHub\LabBratz\LabBratz-nicegui" />
       <recent name="C:\Users\Donap\Documents\GitHub\LabBratz\LabBratz-nicegui\static" />
     </key>
@@ -58,8 +60,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679923922618</updated>
+      <workItem from="1682591673266" duration="54000" />
+      <workItem from="1682591740401" duration="1728000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -71,5 +78,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LabBratz$main.coverage" NAME="main Coverage Results" MODIFIED="1682593319908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LabBratz-nicegui" />
+    <SUITE FILE_PATH="coverage/LabBratz$radarcharts.coverage" NAME="radarcharts Coverage Results" MODIFIED="1682592901378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LabBratz-nicegui" />
   </component>
 </project>
