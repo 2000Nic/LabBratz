@@ -20,7 +20,9 @@ class Bac_image:
 
         with self.div:
             self.im = ui.interactive_image(path + "?time=" + str(datetime.datetime.now()), on_mouse= self.mouse_handler, cross=True)
-            self.add_remove = ui.radio(["Tilføj", "Fjern"], value="Tilføj").props('inline')
+            with ui.row():
+                self.add_remove = ui.radio(["Tilføj", "Fjern"], value="Tilføj").props('inline')
+                ui.button("Slet alle", on_click=self.clear_all)
             ui.button("Gem som png", on_click=self.save)
             ui.button("Skift billede", on_click=upload_new).style("margin-top: 10px;")
 
@@ -85,6 +87,9 @@ class Bac_image:
         with self.product_container:
             ui.label(str(len(self.keypoints)) + " bakteriekolonier").style("font-size: 20px; font-weight: bold; color: #757575;")
 
+    def clear_all(self):
+        self.keypoints = []
+        self.draw()
     def get_blob_count(self):
         return len(self.keypoints)
 
