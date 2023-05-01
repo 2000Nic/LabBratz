@@ -14,6 +14,8 @@ class Image:
         self.div = ui.element('div').style("float: right; margin-top: 50px; right: 50px; width: 350px; "
                                            "position: absolute; display: inline-grid;")
         self.keypoints = []
+        filenamewithext = path.split('/')[-1]
+        self.filename = filenamewithext.split('.')[0]
         self.colortheme = colortheme
         self.topline = ""
         self.bottomline = ""
@@ -32,8 +34,7 @@ class Image:
                 ui.button("Slet alle", on_click=self.clear_all)
             ui.button("Gem som png", on_click=self.save)
             ui.button("Skift billede", on_click=upload_new).style("margin-top: 10px;")
-            ui.button("Gem tabel", on_click=self.save_table)\
-                .style("margin-top: 10px; margin-bottom: 30px;").props("color='purple'")
+            ui.button("Gem tabel", on_click=self.save_table).style("margin-top: 10px; margin-bottom: 30px;").props("color='purple'").tooltip(f"Når du gemmer en tabel kan du finde den som {self.filename}.csv fil i mappen \"saved-tables\" i programmets mappe.")
 
         self.blob_detector = Blob_Detector(path)
         self.blob_detect()
@@ -151,7 +152,7 @@ class Image:
         self.draw()
 
     def save_table(self):
-        with open("C:/Users/Donap/Documents/GitHub/LabBratz/LabBratz-nicegui/static/table.csv", 'w') as csvfile:
+        with open(f"./saved-tables/{self.filename}.csv", 'w') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=["Data ID", "Rf-værdi"])
             writer.writeheader()
             writer.writerows(self.rf)
