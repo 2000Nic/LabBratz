@@ -31,7 +31,7 @@ class Info:
                 ui.label('Kontakt').classes('text-2xl')
                 with ui.row():
                     ui.icon("memory")
-                    ui.label("GitHub")
+                    ui.label("GitHub:")
                     ui.link("https://github.com/2000Nic/LabBratz", "https://github.com/2000Nic/LabBratz/")
                 with ui.row():
                     ui.icon("local_post_office")
