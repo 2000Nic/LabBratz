@@ -27,7 +27,9 @@ class Image:
 
         with self.div:
             self.im = ui.interactive_image(path + "?time=" + str(datetime.datetime.now()), on_mouse= self.mouse_handler, cross=True)
-            self.add_remove = ui.radio(["Tilføj", "Fjern"], value="Tilføj").props('inline')
+            with ui.row():
+                self.add_remove = ui.radio(["Tilføj", "Fjern"], value="Tilføj").props('inline')
+                ui.button("Slet alle", on_click=self.clear_all)
             ui.button("Gem som png", on_click=self.save)
             ui.button("Skift billede", on_click=upload_new).style("margin-top: 10px;")
             ui.button("Gem tabel", on_click=self.save_table)\
@@ -153,5 +155,9 @@ class Image:
             writer = csv.DictWriter(csvfile, fieldnames=["Data ID", "Rf-værdi"])
             writer.writeheader()
             writer.writerows(self.rf)
+
+    def clear_all(self):
+        self.keypoints = []
+        self.draw()
 
 

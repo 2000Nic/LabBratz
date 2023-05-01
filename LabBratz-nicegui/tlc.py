@@ -31,4 +31,3 @@ class TLC:
         ui.open(tlc_page)
 
 
-hew = TLC()
