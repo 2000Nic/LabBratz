@@ -13,3 +13,4 @@ class Header:
 
         with ui.footer().classes():
             ui.label('© 2023 LabBratz')
+            ui.link("GitHub", "https://github.com/2000Nic/LabBratz").style("color:white")
