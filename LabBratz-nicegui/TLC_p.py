@@ -12,7 +12,7 @@ class TLC_Page:
             ui.label('Denne handling vil slette det nuværende billede og alle indstillinger. Du kan med fordel gemme billedet. Vil du fortsætte?')
             with ui.row():
                 ui.button('Tilbage', on_click=self.dialog.close)
-                ui.button("Fortsæt", on_click=ui.open("/TLC"))
+                ui.button("Fortsæt", on_click=lambda: ui.open("/TLC"))
 
         with ui.column().style("float: left; margin-top: 50px; left: 50px; width: 500px; position: absolute; display: inline-grid;"):
             ui.label("TLC-analyse").style("font-size: 40px; font-weight: bold; color: #757575;")
