@@ -1,4 +1,4 @@
-from nicegui import ui
+from nicegui import ui,app
 import json
 import io
 
@@ -70,3 +70,4 @@ class QDA_setup:
         QDA = {"name": self.QDA_name, "parameters": self.params, "products": self.products}
         with io.open(f"./saved-setups/{self.QDA_name}.bratz", mode='w', encoding="utf-8") as outfile:
             json.dump(QDA, outfile)
+        ui.open("/QDA")
