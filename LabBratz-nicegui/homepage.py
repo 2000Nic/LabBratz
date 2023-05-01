@@ -5,9 +5,9 @@ from header import Header
 class Homepage:
     def __init__(self):
         ui.colors(primary='#7EC8F2')
-        TLC = Card("TLC", "TLC.png", "<p> TLC er en metode til at bestemme <br> koncentrationen af en blanding<p>", "TLC")
-        QDA = Card("QDA", "RadarChart.png", "<p> QDA er en metode:)<p>", "QDA")
-        Bakterie = Card("Bakterietælling", "Bakterier.png", "<p> Bakterietælling:)<p>", "bakterie")
+        TLC = Card("TLC", "TLC.png", "<p>Med TLC kan du analysere dine<br>TLC analyser og finde RF-værdier<br>&nbsp; <p>", "TLC")
+        QDA = Card("QDA", "RadarChart.png", "<p>Med QDA kan du digitalisere dine<br>sensoriske analyser, og effektivisere<br>din databehandling<p>", "QDA")
+        Bakterie = Card("Bakterietælling", "Bakterier.png", "<p>Med bakterietælling kan du hurtigere<br>tælle bakteriekolonier på dine plader<br>&nbsp;<p>", "bakterie")
         Header()
         self.title()
         with ui.row().classes('self-center'):
