@@ -150,7 +150,7 @@ class Image:
         self.draw()
 
     def save_table(self):
-        with open("C:/Users/Donap/Documents/GitHub/LabBratz/LabBratz-nicegui/static/table.csv", 'w') as csvfile:
+        with open("./saved-tables/table.csv", 'w') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=["Data ID", "Rf-værdi"])
             writer.writeheader()
             writer.writerows(self.rf)
