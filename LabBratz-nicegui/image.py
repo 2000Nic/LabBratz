@@ -8,15 +8,16 @@ import datetime
 import csv
 class Image:
 
-    def __init__(self, path, upload_new, colortheme='pink', automark=True):
+    def __init__(self, path, upload_new, auto=True):
 
         self.bgimage = Pim.open(path)
         self.div = ui.element('div').style("float: right; margin-top: 50px; right: 50px; width: 350px; "
                                            "position: absolute; display: inline-grid;")
         self.keypoints = []
+        self.auto = auto
         filenamewithext = path.split('/')[-1]
         self.filename = filenamewithext.split('.')[0]
-        self.colortheme = colortheme
+        self.colortheme = 'pink'
         self.topline = ""
         self.bottomline = ""
         self.topline_y = 0
@@ -39,6 +40,9 @@ class Image:
         self.blob_detector = Blob_Detector(path)
         self.blob_detect()
         self.draw()
+        if not self.auto:
+            print(self.auto)
+            self.clear_all()
 
 
 
