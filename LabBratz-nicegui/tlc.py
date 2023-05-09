@@ -6,8 +6,8 @@ from uploader import Uploader
 
 
 @ui.page('/tlc_page')
-def tlc_page():
-    TLC_Page()
+def tlc_page(auto: bool = True):
+    TLC_Page(auto)
 
 
 class TLC:
@@ -28,6 +28,6 @@ class TLC:
             ui.label("Billedet skal enten uploades som .png eller .jpg").style("font-size: 15px; font-weight: bold; color: #757575; margin-bottom: 50px;")
 
     def open_image_page(self):
-        ui.open(tlc_page)
+        ui.open(f"tlc_page?auto={self.switch.value}")
 
 

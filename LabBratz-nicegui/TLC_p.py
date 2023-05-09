@@ -3,11 +3,11 @@ from header import Header
 from image import Image
 
 class TLC_Page:
-
-    def __init__(self):
+    def __init__(self, auto):
         ui.colors(primary='#F1AEF2')
+        self.auto = auto
         Header()
-        self.im = Image("./static/uploaded.png", self.upload_new)
+        self.im = Image("./static/uploaded.png", self.upload_new, auto)
         with ui.dialog() as self.dialog, ui.card():
             ui.label('Denne handling vil slette det nuværende billede og alle indstillinger. Du kan med fordel gemme billedet. Vil du fortsætte?')
             with ui.row():
