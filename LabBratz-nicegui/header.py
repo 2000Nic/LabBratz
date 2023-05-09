@@ -12,5 +12,5 @@ class Header:
             ui.button('Info', on_click=lambda: ui.open('info')).props("flat color=white")
 
         with ui.footer().classes():
-            ui.label('© 2023 LabBratz')
+            ui.label('Published under CC-BY-SA - LabBratz')
             ui.link("GitHub", "https://github.com/2000Nic/LabBratz").style("color:white")
