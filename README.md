@@ -8,6 +8,6 @@ Programmet er vores officielle asylansøgning til PLS.
 2. Download python 3.10.11 fra [Python.org](https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe)
 >OBS: Sørg for at godkende at python skal tilføjes til miljøvariabler under avancerede indstillinger. I nogle tilfælde kræver programmet at v3.10.10 er den eneste Python-version installeret - enkelte senere versioner kan fungere men er ikke understøttede.
 3. Naviger med kommandoprompten til LabBratz-nicegui mappen i LabBratz mappen
-4. Kør kommandoen `pip install nicegui, cairosvg, pipwin, opencv-python`
+4. Kør kommandoen `pip install nicegui, cairosvg, pipwin, opencv-python, plotly`
 5. Kør kommandoen `pipwin install cairocffi`
 6. Du kan nu starte programmet ved at køre filen main.py, som en pythonfil
